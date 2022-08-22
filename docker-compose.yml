@@ -83,6 +83,7 @@ services:
         - grafana
     grafana:
         image: grafana/grafana
+	user: "$UID:$GID"
         depends_on:
             - prometheus
         ports:
